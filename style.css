@@ -153,6 +153,7 @@ p {
 }
 
 .home__avatar {
+  align-self: center;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -174,9 +175,18 @@ p {
   color: var(--color-white);
 }
 
+.opacity {
+  opacity: 0.5;
+  transition: opacity var(--annimation-duration) ease-in-out;
+}
+
 /* section common */
 
 .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   padding: 50px;
   text-align: center;
   margin: auto;
