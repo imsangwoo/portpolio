@@ -145,11 +145,14 @@
         <h1>My Work</h1>
       <h3>project</h3>
       <div class="work__categories">
-        <button class="categories__btn active">
+        <button class="categories__btn active" data-filter="*">
           All<span class="categories__count">1</span>
         </button>
-        <button class="categories__btn">
+        <button class="categories__btn" data-filter="front-end">
           Front-end<span class="categories__count">1</span>
+        </button>
+        <button class="categories__btn" data-filter="back-end">
+          back-end<span class="categories__count">1</span>
         </button>
       </div>
       <div class="work__project">
@@ -157,6 +160,7 @@
           href="https://github.com/imsangwoo/portpolio"
           class="project"
           target="blank"
+          data-type="front-end"
         >
           <img class="project__img" src="./imgs/simple1.jpg" alt="a" />
           <div class="project__description">
@@ -168,6 +172,7 @@
           href="https://github.com/imsangwoo/portpolio"
           class="project"
           target="blank"
+          data-type="front-end"
         >
           <img class="project__img" src="./imgs/simple2.jpg" alt="a" />
           <div class="project__description">
@@ -179,6 +184,7 @@
           href="https://github.com/imsangwoo/portpolio"
           class="project"
           target="blank"
+          data-type="back-end"
         >
           <img class="project__img" src="./imgs/simple3.jpg" alt="a" />
           <div class="project__description">
@@ -190,6 +196,7 @@
           href="https://github.com/imsangwoo/portpolio"
           class="project"
           target="blank"
+          data-type="back-end"
         >
           <img class="project__img" src="./imgs/simple4.jpg" alt="a" />
           <div class="project__description">
