@@ -14,17 +14,25 @@ document.addEventListener('scroll',() => {
 
 const navbarMenu = document.querySelector('.navbar__menu');
 const homeContent = document.querySelector('.home__contect');
+const arrowupBtn = document.querySelector('.arrowup-btn');
 
 navbarMenu.addEventListener('click', handleClick)
 homeContent.addEventListener('click', handleClick )
+arrowupBtn.addEventListener('click', () => scrollintoview('#home'));
 
 function handleClick(event) {
     const tarGet = event.target;
     const link = tarGet.dataset.link;
+    console.log(link);
     if(link === null) {
       return;
     }
     scrollintoview(link);
+}
+
+function scrollintoview(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: "smooth" , block:"center"});
 }
 
 const homeContainer = document.querySelector('.home__container');
@@ -34,9 +42,15 @@ document.addEventListener('scroll',() => {
   homeContainer.style.opacity = 1 - window.scrollY / homecontainerHeight;
 })
 
-function scrollintoview(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({behavior: "smooth" , block:"center"});
-}
 
+const homeHeight = home.getBoundingClientRect().height;
+
+
+document.addEventListener('scroll', () => {
+  if(window.scrollY > homeHeight) {
+    arrowupBtn.classList.add('arrowup-btn-view');
+  } else {
+    arrowupBtn.classList.remove('arrowup-btn-view');
+  }
+})
 

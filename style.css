@@ -144,6 +144,23 @@ p {
   display: none;
 }
 
+.arrowup-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  opacity: 0;
+  transition: opacity var(--annimation-duration) ease-in;
+  font-size: var(--font-medium);
+  padding: 8px 12px;
+  background-color: var(--color-dark-pink);
+  color: var(--color-white);
+  border-radius: 50%;
+}
+
+.arrowup-btn-view {
+  opacity: 1;
+}
+
 /* home */
 #home {
   background: url(./imgs/home_background.png) center/cover no-repeat;
